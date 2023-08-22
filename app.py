@@ -2,6 +2,11 @@ import os
 from flask import Flask
 app = Flask(__name__)
 
+# Place and run app.py in the same root repository as the code to deploy.
+username = {{ USERNAME }}
+token = {{ ACCESS_TOKEN }}
+namespace = {{ RESPOSITORY }} # 
+
 @app.route('/')
 def hello_world():
    return 'Hello, World!'
